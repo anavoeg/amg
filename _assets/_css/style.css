@@ -438,10 +438,6 @@ color: grey;
   font-size: 0.9em;
   color: black;
 }
-.form-error {
-  color: #FFF;
-  background-color: #F00;
-}
 .amg-btn-send{
   border: none;
   padding: 0.5em;

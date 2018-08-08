@@ -15,44 +15,10 @@
       </div>
 </footer>
   </div>
-  <!--Import jQuery before materialize.js-->
-
   <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
-	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <!-- <script src="_assets/_js/materialize.js"></script> -->
-  <script src="_assets/_js/scripts.js"></script>
-  <!-- <script src="_assets/_js/init.js"></script> -->
-
-   <!-- <script> //this script initialize the navbar toggle
-      $(".button-collapse").sideNav();
-   </script>
-
-   <script>//this script initialize the select field
-      $(document).ready(function() {
-        $('select').material_select();
-      });
-   </script>
-   <script>
-     $(document).ready(function(){
-       // Init Carousel
-       $('.carousel').carousel();
-
-       // Init Carousel Slider
-       $('.carousel.carousel-slider').carousel({fullWidth:true});
-// $('.carousel-slider').slider({full_width: true});//slider init
-       // Fire off toast
-       //Materialize.toast('Hello World', 3000);
-
-       // Init Slider
-       $('.slider').slider();
-
-       // Init Modal
-       // $('.modal').modal();
-
-       // Init Sidenav
-       // $('.button-collapse').sideNav();
-     });
-   </script> -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="_assets/_js/scripts.js"></script>
 </body>
 </html>
