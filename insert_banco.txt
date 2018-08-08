@@ -1,0 +1,1 @@
+INSERT INTO `desaparecidos` (`id`, `nome`, `idade`, `data`, `visto_por_ultimo`, `recompensa`, `foto`) VALUES (NULL, 'Vinicius Martins', '1995-08-21', '2016-05-18', 'na rua A', '100', '_assets/_img/kid.jpeg');
