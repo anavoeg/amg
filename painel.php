@@ -27,12 +27,14 @@
     <header class="amg-top">
         <nav class="header-nav">
           <a href="index.php" class="amg-brand"><h1>amg</h1></a>
-          <!-- <span class="logout">
-            <i class="fas fa-sign-out-alt"></i>
-          </span> -->
           <ul class="navigation" >
-            <li><a href="institucional.php">crianças desaparecidas</a></li>
-            <li><a href="contato.php">eventos</a></li>
+            <li>crianças desaparecidas</li>
+            <li>eventos</li>
+            <li><span class="logout"><a href="sair.php">
+              <img src="_assets/_img/logout.png" alt=""></a>
+            <!-- <i class="fas fa-sign-out-alt"></i> -->
+          </span>
+</li>
           </ul>
         </nav>
     </header>
@@ -50,35 +52,38 @@
             </ul>
             </div>
         </div>
-        <form method="POST" enctype="multipart/form-data" class="admin-form missing-kid">
+        <form method="POST" enctype="multipart/form-data" class="admin-form missing-kids">
+            <h4>Formulário de crianças desaparecidas</h4>
+            <hr>
             <div class="input-field">
-                <input type="file" id="files" class="hidden">
-                <label for="files" class="btn">foto da criança desaparecida</label>
+                <input type="file" id="files" class="hidden"><br>
+                <br><label for="files" class="upload">foto da criança desaparecida</label>
             </div>
             <div class="input-field">
                 <input type="text" id="name">
-                <label for="name">Nome da criança desaparecida</label>
+                <br><label for="name">Nome da criança desaparecida</label>
             </div>
             <div class="input-field">
-                <input type="text" id="email" 
-                <label for="email">data do desaparecimento</label>
+                <input type="text" id="email" >
+                <br><label for="email">data do desaparecimento</label>
             </div>
             <div class="input-field">
-                <input type="text" id="textarea" ></textarea>
+                <input type="text" id="textarea" ></input>
                 <br><label for="textarea">visto por ultimo</label>
             </div>
             <div class="input-field">
                 <input type="text" id="email" >
-                <label for="recompensa">recompensa</label>
+                <br><label for="recompensa">recompensa</label>
             </div>
-
+            <button class="btn admin-btn">Enviar dados</button>
         </form>
-        <button class="btn admin-btn">Enviar dados</button>
         
-        <form method="POST" enctype="multipart/form-data" class="admin-form event">
+        <!-- <form method="POST" enctype="multipart/form-data" class="admin-form event">
+            <h4>Formulário de eventos da AMG</h4>
+            <hr>
             <div class="input-field">
-                <input type="file" id="files" class="hidden">
-                <label for="files" class="btn">foto do evento</label>
+                <input type="file" id="files" class="hidden"><br>
+                <label for="files" class="upload">foto do evento</label>
             </div>
             <div class="input-field">
                 <input type="text" id="name">
@@ -93,9 +98,8 @@
                 <br>               
                 <label for="recompensa">artigo sobre o evento</label>
             </div>
-
-        </form>
-        <button class="btn admin-btn">Enviar dados</button>
+            <button class="btn admin-btn">Enviar dados</button>
+        </form> -->
 
     </div>
 </body>

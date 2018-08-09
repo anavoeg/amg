@@ -22,31 +22,27 @@ background: cadetblue;
 color: white;
 display: flex;
 align-items: center;
-justify-content: space-evenly;
+justify-content: space-between;
 height: 50px;
 box-shadow: 0 0 10px 0 darkblue;
 padding: 2em 2em;
     }
-  .hamburger {
-      display: flex;
-      align-items: center;
-  }
   .navigation {
       display: flex;
+      align-items: center;
   }
   
   .navigation li {
       padding-left: 20px;
+      color: black;
       display: block;
   }
   .header-nav .amg-brand {
       float: left;
   }
-  .wrapper{
-      display: grid;
-      grid-template-columns: 40% 50%;
-      justify-content: space-between;
-      }
+  /* .wrapper{
+
+} */
   .site-pages{
     margin: 1em 0;
     display: flex;
@@ -58,10 +54,12 @@ padding: 2em 2em;
  .site-menu li{
      line-height: 1.5em;
      padding: 1em;
+     cursor: pointer;
  }   
  .admin-form{
       border: 2px solid violet;
       padding: 0.5em;
+      margin: 1em 0;
  }
  .input-field{
     margin: 2em 0;
@@ -94,6 +92,7 @@ input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-inpu
   font-weight: 600;
   font-size: 1.2em;
 }
+/*       input line animations       */
 @keyframes full-border{
     0%{width: 30%; border-color: #ced4da}
     100%{width: 100%; border-color: rgb(75, 0, 0);}
@@ -101,6 +100,13 @@ input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-inpu
 @keyframes newsltt{
     0%{border-color: #ced4da}
     100%{border-color: rgb(75, 0, 0);}
+}
+/*       /input line animations       */
+
+.missing-kids h4, .event h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
 }
 .hidden{
     visibility: hidden;
@@ -111,7 +117,25 @@ input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-inpu
     padding: 1rem 2rem;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
+    cursor: pointer;
 }
+.admin-btn{
+    font-weight: 600;
+    font-size: 1em;
+    background-color: cadetblue;
+    text-align: center;
+}
+.upload{
+    border: 3px solid rgb(0, 97, 100);
+    border-radius: 10px;
+    padding: 0.49em;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+.upload:hover{
+    background-color: rgba(95, 158, 160, 0.20);
+}
+/*       viewport         */
 @media only screen and (max-width: 720px){
     .site-pages{
         margin: 1em 0;
