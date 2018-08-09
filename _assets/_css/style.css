@@ -2,6 +2,7 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
+
 /* global settings */
 html{
   box-sizing: border-box;
@@ -9,39 +10,33 @@ html{
 *, *::before, *::after{
 box-sizing: inherit;
 }
-body, h1, ul, p{
+body, h1, h2, h3, ul, p{
 margin: 0;
 padding: 0;
 
 }
 body{
   font-family: 'Montserrat', sans-serif;
+  overflow-x:hidden;
 }
-a{
-  text-decoration: none;
-  color:initial;
-}
-nav{
-box-shadow: none;
-}
-ul{
-list-style-type: none;
-}
+a{ text-decoration: none; color:initial;}
+
+ul{list-style-type: none;}
+
 textarea, select, input, button { outline: none; }
-input:focus{
-  /* border-color: red; */
-}
 select {
-    width: 100%;
-    padding: 16px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(95, 158, 160, 0.507);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
 }
 option{
-  border-color: white;
-  background-color: white;
-  /* color: red; */
+  background-color: rgba(95, 158, 160, 0.507);
+  font-weight: 600;
   font-family: 'Montserrat', sans-serif;
 
   font-size: 1em;
@@ -50,9 +45,7 @@ option[selected]{
   font-family: 'Montserrat', sans-serif;
 
 }
-option:hover{
-  background-color: pink;
-}
+
 /*classes e id's do conteúdo do site*/
 
 /*     body           */
@@ -63,9 +56,17 @@ option:hover{
   background: linear-gradient(#e66465, #9198e5);
 }
 
+.btn{
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
 /*     landing page*/
 .v-section{
-  height:100%;
+  height:100vh;
   display:flex;
   align-items:center;
   color:#fff;
@@ -73,8 +74,8 @@ option:hover{
 
 .land-container{
   max-width:960px;
-  padding-left:1rem;
-  padding-right:1rem;
+  /* padding-left: 3rem;
+  padding-right: 3rem; */
   margin:auto;
   text-align:center;
 }
@@ -94,24 +95,25 @@ option:hover{
 }
 
 .section-overlay{
-  height:100%;
+  height:100vh;
   position: absolute;
   top:0;
   left:0;
-  width:100%;
+  width:100vw;
   z-index:1;
   /* background:#225470; */
   background-color: rgba(255, 230, 234, 0.788);
-  opacity:0.85;
+  /* opacity:0.85; */
 }
 
 .section-content{
   z-index:2;
 }
 
-.section-content h2 {
+.section-content h1{
   font-size:50px;
   margin-bottom:0;
+  color: rgb(212, 0, 231);
 }
 
 .section-content p{
@@ -120,13 +122,51 @@ option:hover{
   padding-bottom:2rem;
 }
 
-.btn{
-  background: darkmagenta;
-  color:#fff;
-  font-size:1.2rem;
-  padding: 1rem 2rem;
-  text-decoration: none;
+#land-nav{
+  padding:  1.5em 1.3em 5em;
+  background-color: lavenderblush;
 }
+#land-nav h2{
+  text-align: center;
+  font-size: 1.8em;
+  color: #e66465;
+  margin: 1.5em 0;
+}
+#land-nav-box{
+  box-shadow: 0 10px 10px 0 #9198e5;
+  border-radius: 10%;
+  padding: 0.6em 1em;
+}
+#land-nav-box li {
+  text-align: center;
+}
+#land-nav-box li a{
+  line-height: 3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #e66465;
+}
+#land-nav-box .land-nav-icon{
+  font-size: 0.8em;
+  color: #9198e5;
+  border: 1px solid;
+  padding: 1em;
+  border-radius: 50px;
+}
+#land-nav-box .land-nav-icon:hover{
+  background-color: #9198e5;
+  color: white;
+}
+#land-nav-box li a:hover{
+  color: black;
+}
+.section-b{
+  background:#333;
+  color:#fff;
+}
+
+
 .section-nav-site{
   background-color: lightcoral;
   width: 100%;
@@ -134,9 +174,6 @@ option:hover{
   /* position: absolute; */
   clip-path: polygon(50% 40%, 100% 0, 100% 100%, 0 100%, 0 0);
   z-index: -1;
-}
-.text-md-center{
-  text-align: center;
 }
 
 /*     full site           */
@@ -154,7 +191,7 @@ option:hover{
     align-items: center;
     justify-content: space-between;
     height: 50px;
-    box-shadow: 0 0 2px 0 powderblue;
+    box-shadow: 0 0 10px 0 darkmagenta;
     padding: 2em 2em;
   }
 /*hamburger icon*/
@@ -162,28 +199,10 @@ option:hover{
     display: flex;
     align-items: center;
 }
-
-/* .hamburger__button {
-    width: 3rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .hamburger__button:focus {
-    outline: none;
-  }
-
-  .hamburger__button-bar {
-    width: 100%;
-    height: 0.2rem;
-    background: white;
-    display: block;
-    margin: 0.6rem 0;
-  }
- */
+.fa, .fas {
+  font-weight: 900;
+  font-size: 1.5em;
+}
 /*desktop*/
 .navigation {
     display: flex;
@@ -204,52 +223,7 @@ option:hover{
     background-position: center;
 }
 
-/* header.amg-top{
-background-image: url('../assets/img/img_toys.jpg');
-background-position: center;
-background-size: cover;
-background-color: #1500ff6c;
-padding: 0.8em;
-} */
-/* .amg-brand h1{
-text-transform: uppercase;
-font-family: 'Montserrat', sans-serif;
-font-size: 2.5em;
-padding-top: 0.2em;
-}
-.side-nav {
-  background-color: #eee;
-   background-image: url('../_img/kids1.jpg');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-.side-nav li > a {
-  color: rebeccapurple;
-  display: block;
-  font-size: 1.5em;
-  font-weight: 900;
-  margin-bottom: 3em;
-  line-height: 48px;
-  padding: 22px;
-}
-.side-nav .nav-layer{
-  background-color: rgba(255, 230, 234, 0.788);
-}
-.nav-layer{
-  height: 100%;
-}
-.waves-effect{
-  transition: .10s ease-out;
-} */
-
 /*Mobile navigation*/
-.layer{
-  /* width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(90, 90, 90, 0.9); */
-}
 .mobile {
     position: absolute;
     top: 0;
@@ -309,7 +283,7 @@ padding-top: 0.2em;
 
 /*    conteúdo do site           */
 .content{
-padding: 5em;
+padding: 3em;
 }
 .mouse {
 	max-width: 2.5rem;
@@ -356,34 +330,147 @@ padding: 5em;
 /*    conteúdo da página doação          */
 .amg-doe{
   background: url('../_img/mario-luigi.jpeg') no-repeat center center/cover;
-  padding: 10em;
+  padding: 10em 0;
 }
 .amg-doe h2{
   color: #ffffff;
   text-align: center;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: bolder;
 }
+.amg-doe-brinquedo{
+  display: flex;
+  flex-wrap: wrap;
+}
 .amg-doacao{
+  box-shadow: 0 0 20px 0 darkcyan;
+  padding: 0.3em;
+  background-color: aliceblue;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-.amg-doacao1, .amg-doacao2, .amg-doacao3{
-
+.amg-doacao1 h3, .amg-doacao2 h3, .amg-doacao3 h3{
+  border: 3px solid lavender;
+  color: deeppink;
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 0.2em;
+  padding: 0.8em;
+  margin-bottom: 1em;
+}
+.amg-doacao1 p, .amg-doacao2 p, .amg-doacao3 p{
+  text-align: justify;
+  color: darkmagenta;
+  letter-spacing: 0.1em;
 }
 
-/*           conteúdo da página institucional*/
+
+
+/*    conteúdo da página institucional      */
+.amg-aboutus-first{
+  padding: 3em;
+}
+.amg-aboutus-header h3{
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.amg-aboutus-header p{
+  line-height: 1.7em;
+}
+.section-about{
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.section-puzzle-icon{
+  text-align: center;
+  font-size: 3.3em;
+  color: rgb(218, 0, 73);
+}
+.section-about h4{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(218, 0, 73);
+  font-size: 1.5em;
+  text-align: center;
+}
+.section-nstates-img{
+  text-align: center;
+}
+.fa-plus-circle{
+  font-size: 1em;
+}
+.section-people-gallery{
+  border: 2px solid rgb(218, 0, 73);
+}
+.volunter{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.volunter img{
+  width: 100%;
+}
+.section-people-gallery p{
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.2em;
+  margin-top: 1em;
+  background: rgba(218, 0, 73, 0.116);
+}
+.missing-kids-section{
+  background-color: rgba(255, 0, 0, 0.829);
+}
+.missing-kids-header p{
+  font-weight: 600;
+  margin: 2em 0;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2em;
+  color: rgb(29, 28, 28);
+  border: 2px solid red;
+  font-size: 1em;
+}
+.missing-kids-content{
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+}
+/* card1{
+  grid-column: 1;
+}
+card2{
+  grid-column: 2;
+}
+card3{
+  grid-column: 3;
+}
+card4{
+  grid-column: 4;
+} */
 .card{
-  max-width: 80%;
-  margin: 0.3em;
+  width: 90%;
+  margin: 0 2em 1em 0;
+  align-content: space-evenly;
   box-shadow: 0 0 20px 0 rgb(0, 0, 43);
-}
-.card-missing-header{
-
+  display: flex;
 }
 .card-missing-header img{
   width: 100%;
 }
+.card-missing-header{
+  background-color: rgba(255, 0, 0, 0.562);
+  color: black;
+  font-weight: 700;
+  align-items: flex-end;
+}
+.card-title {
+}
 .card-missing-info{
   text-align: center;
+  background-color: antiquewhite;
 }
 .card-missing-info section{
   margin-top: 0.3em;
@@ -393,10 +480,10 @@ padding: 5em;
 
 
 /*           conteúdo da página apadrinhamento*/
-.amg-form-apadrinhamento form{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.input-field{
+    margin: 2em 0;
 }
+
 fieldset{
 margin-top: 0.5em;
 border-left: none;
@@ -404,19 +491,67 @@ border-right: none;
 border-bottom: none;
 color: darkslategrey;
 }
-.amg-personalinfo-field{
-}
-input[type="text"], input[type="email"]{
+input[type=text], input[type=password], input[type=email]{
   border:none;
-  border-bottom: 2px solid violet;
+  border-bottom: 1.5px solid cadetblue;
   width: 100%
 }
-.form-input{
+input[type=text]:focus, input[type=email]:focus{
+    animation: full-border .80s ease-in-out forwards;
+}
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+@keyframes full-border{
+    0%{width: 30%; border-color: #ced4da}
+    100%{width: 100%; border-color: rgb(75, 0, 0);}
+}
+@keyframes newsltt{
+    0%{border-color: #ced4da}
+    100%{border-color: rgb(75, 0, 0);}
+}
+.input-field{
+    margin: 2em 0;
+}
+
+fieldset{
+margin-top: 0.5em;
+border-left: none;
+border-right: none;
+border-bottom: none;
+color: darkslategrey;
+}
+input[type=text], input[type=password], input[type=email]{
+  border:none;
+  border-bottom: 1.5px solid cadetblue;
+  width: 100%
+}
+input[type=text]:focus, input[type=email]:focus{
+    animation: full-border .80s ease-in-out forwards;
+}
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+@keyframes full-border{
+    0%{width: 30%; border-color: #ced4da}
+    100%{width: 100%; border-color: rgb(75, 0, 0);}
+}
+@keyframes newsltt{
+    0%{border-color: #ced4da}
+    100%{border-color: rgb(75, 0, 0);}
+}
+/* .form-input{
   margin: 0.5em;
 }
 .form-input label{
   margin-right: 1em;
-}
+} */
 .amg-option{
 margin:  1.5em 1em;
 }
@@ -434,19 +569,21 @@ color: grey;
   padding-bottom: 1em;
   font-size: 1em;
 }
+.amg-apmtoinfo-field{
+  font-weight: 600;
+  color: black;
+}
 .amg-terms{
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: 600;
   color: black;
 }
 .amg-btn-send{
-  border: none;
-  padding: 0.5em;
-  border-radius: 5px;
   background-color: lightcoral;
-  text-align: center;
-  font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
+  /* text-align: center; */
+  font-size: 1.2em;
+  width: 95%;
+  font-weight: 600;
 }
 .container {
     display: block;
@@ -496,7 +633,8 @@ color: grey;
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark-radio {
-    background-color: #2196F3;
+  background-color: white;
+  border: 3px solid darkmagenta;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -513,13 +651,12 @@ color: grey;
 
 /* Style the indicator (dot/circle) */
 .container .checkmark-radio:after {
-  top: 6px;
-    left: 7px;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: white;
-}
+  top: 2.1px;
+  left: 2.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: darkorchid;}
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark-box {
@@ -557,6 +694,43 @@ color: grey;
   transform: rotate(45deg);
 }
 
+/*   contato                  */
+.contact-form{
+  border-top: 1px solid lightblue;
+  border-bottom: 1px solid lightblue;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding: 2em 1em 1em 1em;
+}
+.contact-header{
+  padding: 0.3em;
+  background-color: rgba(128, 128, 128, 0.068);
+}
+.contact-header h3{
+  text-align: center;
+  font-size: 1.3em;
+}
+.contact-header p{
+  margin-top: 0.5em;
+  font-weight: 600;
+  color: rgb(0, 72, 114);
+}
+.amg-message{
+  width: 70%;
+  border: 2px solid cadetblue;
+  height: 5em;
+  /* border-left: 2px solid blueviolet;
+  border-right: 2px solid blueviolet; */
+}
+.contact-btn{
+  background-color: rgba(125, 192, 255, 0.356);
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
 
 
 /*    footer           */
@@ -572,8 +746,122 @@ padding: 0;
 .page-footer .footer-layer{
 background-color: rgba(255, 192, 203, 0.699);
 }
+.footer-content{
+  padding-top:1em; 
+}
+blockquote {
+  background: #f9f9f952;
+  border-left: 10px solid deeppink;
+  margin: 1.5em 0;
+  padding: 0.5em 0.3em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: deeppink;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+
+}
+h5.midia-text{
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0;
+
+}
+.bold-line{
+  border: 1px solid darkorchid;
+}
+.midias{
+  display: flex;
+  justify-content: space-evenly;
+}
+.midia{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 0.9em;
+  font-size: 2em;
+}
+.midia-f{
+  color: blue;
+  border: 2px solid blue;
+}
+.midia-f:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.midia-t{
+  color: #1da1f2;
+  border: 2px solid #1da1f2;
+}
+.midia-t:hover{
+  background-color: #1da1f2;
+  color: white;
+  cursor: pointer;
+}
+.midia-w{
+  color: #075e54;
+  border: 2px solid #075e54;
+
+}
+.midia-w:hover{
+  background-color: #075e54;
+  color: white;
+  cursor: pointer;
+}
+
+.contact{
+  border: 0.3em solid violet;
+  padding: 0.3em;
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.contact h4{
+  width: 100%;
+  order: -1;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.8em;
+  color: rebeccapurple;
+}
+.contact > *{
+  flex: 1 100%;
+}
+.contact-box{
+  box-shadow: 0 0 10px 0 blanchedalmond;
+  padding: 0.5em;
+  margin: 0.5em;
+  flex-basis: 190px;
+}
+.contact-box li{
+  font-weight: 600;
+
+}
+.fa-phone-square{
+  color: rgba(139, 0, 139, 0.603);
+}
+.contact-rj{
+  order: 1;
+}
+.contact-sp{
+  order: 2;
+}
 .footer-bottom{
-  background-color: rgba(206, 206, 206, 0.103);
+  background-color: rgba(0, 0, 0, 0.342);
   z-index: -1;
 }
 @media only screen and (max-width: 720px){
@@ -583,10 +871,62 @@ background-color: rgba(255, 192, 203, 0.699);
 .content{
   padding: 1em;
 }
+/*land page*/
+#land-nav {
+  padding: 0.3em;
+}
+#land-nav-box li {
+  text-align: start;
+}
+.amg-doe h2{
+  font-size: 7vw;
+  line-height: 1.8;
+}
+.missing-kids-content{
+  grid-template-columns: 100%;
+  justify-content: space-between;
+}
+.card{
+  flex-direction: column;
+}
+.card-missing-info{
+  text-align: start;
+}
+.card-missing-info section {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.amg-doacao1 p, .amg-doacao2 p, .amg-doacao3 p{
+  letter-spacing: 0;
+}
+.volunter{
+  grid-template-columns: 100%;
+}
 .amg-form-apadrinhamento{
   flex-direction: column;
   }
   .amg-btn-send{
-    font-size: 3vw;
+    font-size: 1em;
+    padding: 1em 0;
+    font-weight: 600;
+    width: 100%;
   }
+.amg-btn-send .material-icons{
+  display: none;
+}
+.amg-message{
+  width: 100%;
+}
+.amg-aboutus-first {
+  padding: 0;
+}
+.midias{
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.midia {
+  width: 50px;
+  height: 50px;
+  padding: 0.1em;
+}
 }
