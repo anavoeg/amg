@@ -1,31 +1,28 @@
 <?php
-session_start();
-date_default_timezone_set('America/Sao_Paulo'); //definindo timezone para que pegue data e hora correta
-// require 'conn.php';
-    if(isset($_SESSION['loginEmp']) && empty($_SESSION['loginEmp']) == false){
-        header("Location: painelmercado.php");//se usuario tiver logado
+	session_start();
+
+	require '_config/config.php';
+	require '_includes/header.php';
+    if(isset($_SESSION['login']) && empty($_SESSION['login']) == false){
+        header("Location: amg-painel.php");//se usuario tiver logado
         exit; //para que todo o codigo abaixo nao seja executado
     }
 
-    if(isset($_POST['email']) && empty($_POST['email']) == FALSE){ // verificando
+    if(isset($_POST['usuario']) && !empty($_POST['usuario'])){ // verificando
             
-        $email = addslashes($_POST['email']);
+        $usuario = addslashes($_POST['usuario']);
         
         $senha = addslashes($_POST['senha']);
-
         
-        
-        $sql = $pdo->prepare("SELECT * FROM empresa WHERE email = :email && senha = :senha && status=2");
-        $sql -> bindValue(":email", $email);
+        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE usuario = :usuario && senha = :senha && status=1");
+        $sql -> bindValue(":usuario", $usuario);
         $sql -> bindValue(":senha", md5($senha));
         $sql -> execute();
-        //verificar se achou retorno
+        //verificar se achou alguma coisa
         if($sql -> rowCount() > 0){
             $sql = $sql->fetch();//pegando os dados
-            $_SESSION['loginEmp'] = $sql['id'];
-			$_SESSION['respEmp'] = $sql['nome_responsavel'];
-			require_once 'log.php';			
-            header("Location: painelmercado.php");
+            $_SESSION['login'] = $sql['id'];	
+            header("amg-painel.php");
             exit; //para que todo o codigo abaixo nao seja executado
         } else {
             echo "<script type='text/javascript'>alert('Usuário ou Senha Incorretos.')</script>";
@@ -54,7 +51,7 @@ date_default_timezone_set('America/Sao_Paulo'); //definindo timezone para que pe
         <div class="container">
             <section class="login-form">
                 <form method="POST" role="login">
-                    <input type="text" name="email" placeholder="Usuário" required class="form-control input-lg"  />
+                    <input type="text" name="usuario" placeholder="Usuário" required class="form-control input-lg"  />
                     
                     <input type="password" name="senha" class="form-control input-lg" id="password" placeholder="Senha" required="" />
                                 
@@ -69,3 +66,6 @@ date_default_timezone_set('America/Sao_Paulo'); //definindo timezone para que pe
     </div>
 </body>
 </html>
+<?php
+   require '_includes/footer.php';
+?>

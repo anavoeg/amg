@@ -1,5 +1,12 @@
 <?php
-    // require '_includes/header.php';
+	session_start();
+	require '_config/config.php';
+	require '_includes/header.php';
+	
+	if(!isset($_SESSION['login']) || empty($_SESSION['login'])){//se não existir uma sessao de login eu deslogo o cara.
+		header("Location: sair.php");	
+		exit;		
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,5 +101,5 @@
 </body>
 </html>  
 <?php
-    // require '_includes/footer.php';
+   require '_includes/footer.php';
 ?>
