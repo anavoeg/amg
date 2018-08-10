@@ -1,10 +1,9 @@
 <?php
-	session_start();
-
-	require '_config/config.php';
 	require '_includes/header.php';
-    if(isset($_SESSION['login']) && empty($_SESSION['login']) == false){
-        header("Location: amg-painel.php");//se usuario tiver logado
+	require '_config/config.php';
+	
+    if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
+        header("Location: painel.php");//se usuario tiver logado
         exit; //para que todo o codigo abaixo nao seja executado
     }
 
@@ -22,7 +21,7 @@
         if($sql -> rowCount() > 0){
             $sql = $sql->fetch();//pegando os dados
             $_SESSION['login'] = $sql['id'];	
-            header("amg-painel.php");
+            header("Location: painel.php");//logou
             exit; //para que todo o codigo abaixo nao seja executado
         } else {
             echo "<script type='text/javascript'>alert('Usuário ou Senha Incorretos.')</script>";

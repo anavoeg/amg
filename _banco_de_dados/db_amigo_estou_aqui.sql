@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Ago-2018 às 00:34
+-- Generation Time: 10-Ago-2018 às 02:29
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -31,8 +31,8 @@ USE `db_amigo_estou_aqui`;
 --
 
 DROP TABLE IF EXISTS `apadrinhamentos`;
-CREATE TABLE IF NOT EXISTS `apadrinhamentos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `apadrinhamentos` (
+  `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `email` varchar(150) NOT NULL,
   `cpf` varchar(14) NOT NULL,
@@ -41,10 +41,7 @@ CREATE TABLE IF NOT EXISTS `apadrinhamentos` (
   `genero` tinyint(1) NOT NULL,
   `renda` double(12,2) NOT NULL,
   `id_endereco` int(11) NOT NULL,
-  `id_interesse` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_interesse_id` (`id_interesse`),
-  KEY `fk_endereco_id` (`id_endereco`)
+  `id_interesse` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela que armazena informações de apadrinhamentos.';
 
 -- --------------------------------------------------------
@@ -54,15 +51,15 @@ CREATE TABLE IF NOT EXISTS `apadrinhamentos` (
 --
 
 DROP TABLE IF EXISTS `desaparecidos`;
-CREATE TABLE IF NOT EXISTS `desaparecidos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `desaparecidos` (
+  `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `idade` date NOT NULL,
-  `data` date NOT NULL,
+  `data_desaparecimento` date NOT NULL,
   `visto_por_ultimo` varchar(255) NOT NULL,
-  `recompensa` double(10,2) NOT NULL,
+  `recompensa` double(10,2) DEFAULT NULL,
   `foto` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `status` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela que mantém informações de crianças desaparecidas.';
 
 -- --------------------------------------------------------
@@ -72,16 +69,15 @@ CREATE TABLE IF NOT EXISTS `desaparecidos` (
 --
 
 DROP TABLE IF EXISTS `enderecos`;
-CREATE TABLE IF NOT EXISTS `enderecos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `enderecos` (
+  `id` int(11) NOT NULL,
   `cep` varchar(9) NOT NULL,
   `estado` varchar(255) NOT NULL,
   `cidade` varchar(255) NOT NULL,
   `bairro` varchar(255) NOT NULL,
   `logradouro` varchar(255) NOT NULL,
   `complemento` varchar(100) NOT NULL,
-  `numero` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  `numero` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela que mantém os endereços dos padrinhos.';
 
 -- --------------------------------------------------------
@@ -91,12 +87,11 @@ CREATE TABLE IF NOT EXISTS `enderecos` (
 --
 
 DROP TABLE IF EXISTS `estados`;
-CREATE TABLE IF NOT EXISTS `estados` (
-  `id_estado` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `estados` (
+  `id_estado` int(11) NOT NULL,
   `sigla` char(2) NOT NULL,
-  `nome` varchar(30) NOT NULL,
-  PRIMARY KEY (`id_estado`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+  `nome` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `estados`
@@ -139,14 +134,116 @@ INSERT INTO `estados` (`id_estado`, `sigla`, `nome`) VALUES
 --
 
 DROP TABLE IF EXISTS `interesses`;
-CREATE TABLE IF NOT EXISTS `interesses` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `interesses` (
+  `id` int(11) NOT NULL,
   `id_estado` int(11) NOT NULL,
   `genero_crianca` tinyint(1) NOT NULL,
-  `idade` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_estado_id` (`id_estado`)
+  `idade` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela que mantém os interesses dos padrinhos.';
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(10) NOT NULL,
+  `senha` varchar(32) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `usuario`, `senha`, `status`) VALUES
+(1, 'admin', '5ebe2294ecd0e0f08eab7690d2a6ee69', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `apadrinhamentos`
+--
+ALTER TABLE `apadrinhamentos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_interesse_id` (`id_interesse`),
+  ADD KEY `fk_endereco_id` (`id_endereco`);
+
+--
+-- Indexes for table `desaparecidos`
+--
+ALTER TABLE `desaparecidos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enderecos`
+--
+ALTER TABLE `enderecos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `estados`
+--
+ALTER TABLE `estados`
+  ADD PRIMARY KEY (`id_estado`);
+
+--
+-- Indexes for table `interesses`
+--
+ALTER TABLE `interesses`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_estado_id` (`id_estado`);
+
+--
+-- Indexes for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `apadrinhamentos`
+--
+ALTER TABLE `apadrinhamentos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `desaparecidos`
+--
+ALTER TABLE `desaparecidos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `enderecos`
+--
+ALTER TABLE `enderecos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `estados`
+--
+ALTER TABLE `estados`
+  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `interesses`
+--
+ALTER TABLE `interesses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

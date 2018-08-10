@@ -1,12 +1,17 @@
 <?php
 	session_start();
 	require '_config/config.php';
-	require '_includes/header.php';
 	
 	if(!isset($_SESSION['login']) || empty($_SESSION['login'])){//se não existir uma sessao de login eu deslogo o cara.
 		header("Location: sair.php");	
 		exit;		
+	}else {
+		require '_get_set/get_desaparecidos.php';
+		require '_get_set/get_arquivos.php';
+		require '_get_set/set_desaparecidos.php';
 	}
+	
+	//Inserção dos dados no banco
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,55 +60,84 @@
         <form method="POST" enctype="multipart/form-data" class="admin-form missing-kids">
             <h4>Formulário de crianças desaparecidas</h4>
             <hr>
-            <div class="input-field">
-                <input type="file" id="files" class="hidden"><br>
-                <br><label for="files" class="upload">foto da criança desaparecida</label>
+			<div class="input-field" style="float: right; margin-right:10%;">
+				<div class="switch"> 
+					<label for="mycheckbox" class="switch-toggle" data-on="Encontrada" data-off="Desaparecida"></label>
+					<input type="checkbox" id="mycheckbox" /> 
+				</div>
             </div>
             <div class="input-field">
-                <input type="text" id="name">
-                <br><label for="name">Nome da criança desaparecida</label>
+                <input name="arquivo" type="file" id="files" class="hidden"><br>
+                <br><label for="files" class="upload">Foto da criança desaparecida</label>
             </div>
             <div class="input-field">
-                <input type="text" id="email" >
-                <br><label for="email">data do desaparecimento</label>
+                <input name="nome" type="text" id="nome">
+                <br><label for="nome">Nome da criança desaparecida</label>
             </div>
             <div class="input-field">
-                <input type="text" id="textarea" ></input>
-                <br><label for="textarea">visto por ultimo</label>
+                <input name="data_desaparecimento" type="text" id="data_desaparecimento" >
+                <br><label for="data_desaparecimento">Data do desaparecimento</label>
+            </div>
+			<div class="input-field">
+                <input name="visto_por_ultimo" type="text" id="visto_por_ultimo" ></input>
+                <br><label for="visto_por_ultimo">Visto por ultimo</label>
             </div>
             <div class="input-field">
-                <input type="text" id="email" >
-                <br><label for="recompensa">recompensa</label>
+                <input name="idade" type="text" min="1" max="18" id="idade" ></input>
+                <br><label for="idade">Data de Nascimento</label>
             </div>
-            <button class="btn admin-btn">Enviar dados</button>
+            <div class="input-field">
+                <input name="recompensa" type="text" id="recompensa">
+                <br><label for="recompensa">Recompensa</label>
+            </div>
+			
+            <button type="submit" class="btn admin-btn">Enviar dados</button>
         </form>
-        
-        <!-- <form method="POST" enctype="multipart/form-data" class="admin-form event">
-            <h4>Formulário de eventos da AMG</h4>
-            <hr>
-            <div class="input-field">
-                <input type="file" id="files" class="hidden"><br>
-                <label for="files" class="upload">foto do evento</label>
-            </div>
-            <div class="input-field">
-                <input type="text" id="name">
-                <label for="name">Nome do evento</label>
-            </div>
-            <div class="input-field">
-                <input type="text" id="email" 
-                <label for="email">data do evento</label>
-            </div>
-            <div class="input-field">
-                <input type="textarea" id="textarea" class="amg-message" >
-                <br>               
-                <label for="recompensa">artigo sobre o evento</label>
-            </div>
-            <button class="btn admin-btn">Enviar dados</button>
-        </form> -->
-
     </div>
+
+	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready( function(){
+			$('.switch').each(function() {
+				var checkbox = $(this).children('input[type=checkbox]');
+				var toggle = $(this).children('label.switch-toggle');
+
+				if (checkbox.length) {
+					checkbox.addClass('hidden');
+					toggle.removeClass('hidden');
+					if (checkbox[0].checked) {
+						toggle.addClass('on');
+						toggle.removeClass('off');
+						toggle.text(toggle.attr('data-on'));
+					} else {
+						toggle.addClass('off');
+						toggle.removeClass('on');
+						toggle.text(toggle.attr('data-off'));
+					};
+				}
+			});
+
+			$('.switch-toggle').click(function(){
+				var checkbox = $(this).siblings('input[type=checkbox]')[0];
+				var toggle = $(this);
+
+				// We need to inverse the logic here, because at the time of processing,
+				// the checked status has not been enabled yet.
+				if (checkbox.checked) {
+					toggle.addClass('off');
+					toggle.removeClass('on');
+					toggle.text(toggle.attr('data-off'));
+				} else {
+					toggle.addClass('on');
+					toggle.removeClass('off');
+					toggle.text(toggle.attr('data-on'));
+				};
+			});
+		});
+	</script>							
+
 </body>
 </html>  
-<?php
-   require '_includes/footer.php';
-?>

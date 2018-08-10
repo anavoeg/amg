@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,6 +20,9 @@
 <body class="amg-body">
   <div class="amg-container">
     <div class="wrapper">
+	<?php if(isset($_SESSION['login']) && !empty($_SESSION['login'])):?>
+	<span><a href="painel.php">Painel Administrativo</a></span>
+	<?php endif;?>
       <header class="amg-top">
         <nav class="header-nav">
           <a href="index.php" class="amg-brand"><h1>amg</h1></a>
