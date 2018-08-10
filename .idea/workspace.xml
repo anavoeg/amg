@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="41402202-a4fb-4619-bfb4-61126e272585" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/amg.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_funcoes/idade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pegar_inserir/atualizar_desaparecidos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pegar_inserir/inserir_desaparecidos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pegar_inserir/pegar_arquivos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/criancas_desaparecidas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_css/amg-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_css/amg-admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/background1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/background1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/background2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/background2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/background20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/background20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/background3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/background3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/brazil-map.svg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/brazil-map.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/coursera.svg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/coursera.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/home-video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/home-video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/img_toys.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/img_toys.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kid.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kid1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kid1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kid2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kid2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kid3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kid3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kid4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kid4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kids.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kids.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/kids1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/kids1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/logout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/mario-luigi.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/mario-luigi.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/people.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/people.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/people1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/people1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/people1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/people1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/people2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/people2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/people3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/people3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_img/switch.png" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_img/switch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/_js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/_ativos/_js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_classes/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/_classes/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/_config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_get_set/get_apadrinhamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/_pegar_inserir/pegar_apadrinhamentos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_get_set/get_arquivos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_get_set/get_desaparecidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/_pegar_inserir/pegar_desaparecidos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_get_set/set_apadrinhamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/_pegar_inserir/inserir_apadrinhamentos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_get_set/set_desaparecidos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apadrinhamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/apadrinhamento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contato.php" beforeDir="false" afterPath="$PROJECT_DIR$/contato.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/institucional.php" beforeDir="false" afterPath="$PROJECT_DIR$/institucional.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/painel.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1338964958">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="jpg" value="9" />
+          <entry key="php" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="Image" value="9" />
+          <entry key="PHP" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="18" />
+          <entry key="dummy" value="1" />
+          <entry key="php" value="2587" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="18" />
+          <entry key="PHP" value="2587" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/painel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="65" column="10" lean-forward="true" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_pegar_inserir/atualizar_desaparecidos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>$sqlEmpProd</find>
+      <find>nomeDb</find>
+      <find>select</find>
+      <find>ativos</find>
+      <find>mail.php</find>
+      <find>_pegar</find>
+      <find>kid.jp</find>
+      <find>header</find>
+      <find>_assets</find>
+      <find>inserir_apa</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/_get_set/set_apadrinhamento.php" />
+        <option value="$PROJECT_DIR$/_config/config.php" />
+        <option value="$PROJECT_DIR$/_get_set/get_desaparecidos.php" />
+        <option value="$PROJECT_DIR$/_get_set/set_desaparecidos.php" />
+        <option value="$PROJECT_DIR$/_get_set/get_arquivos.php" />
+        <option value="$PROJECT_DIR$/_functions/idade.php" />
+        <option value="$PROJECT_DIR$/_ativos/_css/style.css" />
+        <option value="$PROJECT_DIR$/_includes/footer.php" />
+        <option value="$PROJECT_DIR$/_includes/header.php" />
+        <option value="$PROJECT_DIR$/contato.php" />
+        <option value="$PROJECT_DIR$/_pegar_inserir/pegar_arquivos.php" />
+        <option value="$PROJECT_DIR$/criancas_desaparecidas.php" />
+        <option value="$PROJECT_DIR$/_pegar_inserir/inserir_desaparecidos.php" />
+        <option value="$PROJECT_DIR$/painel.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1340" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="amg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="header&#9;FILE&#9;file://E:/laragon/www/amg/_includes/header.php&#10;style&#9;FILE&#9;file://E:/laragon/www/amg/_ativos/_css/style.css&#10;get&#9;FILE&#9;file://E:/laragon/www/amg/_get_set/get_arquivos.php&#10;set&#9;FILE&#9;file://E:/laragon/www/amg/_get_set/set_apadrinhamento.php&#10;set_&#9;FILE&#9;file://E:/laragon/www/amg/_get_set/set_apadrinhamento.php&#10;set_de&#9;FILE&#9;file://E:/laragon/www/amg/_get_set/set_desaparecidos.php&#10;get_ar&#9;FILE&#9;file://E:/laragon/www/amg/_get_set/get_arquivos.php&#10;get_&#9;FILE&#9;file://E:/laragon/www/amg/_get_set/get_desaparecidos.php&#10;painel&#9;FILE&#9;file://E:/laragon/www/amg/painel.php" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41402202-a4fb-4619-bfb4-61126e272585" name="Default Changelist" comment="" />
+      <created>1533866517405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533866517405</updated>
+      <workItem from="1533866519934" duration="174000" />
+      <workItem from="1533866713422" duration="17272000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17446000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24696049" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_06d3bc740e8ba0c8f64427649f5372691533870170179.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_pegar_inserir/pegar_desaparecidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e7153387661727.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e7153387700631.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e71533877003751.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e71533877031126.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e71533877116848.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e71533877125422.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_arquivos/fulana_de_tal_bd6661231506e0fe52c15a3a77ecc1e71533877141141.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_funcoes/idade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doacao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1396">
+          <caret line="112" column="21" lean-forward="true" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_ativos/_css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="219" column="44" lean-forward="true" selection-start-line="219" selection-start-column="44" selection-end-line="219" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contato.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_pegar_inserir/pegar_arquivos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/criancas_desaparecidas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="78" column="143" lean-forward="true" selection-start-line="78" selection-start-column="143" selection-end-line="78" selection-end-column="143" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_pegar_inserir/atualizar_desaparecidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_pegar_inserir/inserir_apadrinhamentos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_pegar_inserir/inserir_desaparecidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="101" lean-forward="true" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/painel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="65" column="10" lean-forward="true" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

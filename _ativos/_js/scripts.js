@@ -198,6 +198,5 @@ $(function() {
             }
         });
     });
-	alert('teste');
 
 });

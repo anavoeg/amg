@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <!-- <link rel="stylesheet" type="text/css" href="_assets/_css/materialize.css"> -->
-  <link rel="stylesheet" type="text/css" href="_assets/_css/style.css">
+  <link rel="stylesheet" type="text/css" href="_ativos/_css/style.css">
   <title>AMG</title>
 
 </head>
@@ -23,7 +23,7 @@
     <div class="fullscreen-video-wrap">
       <!--  https://www.videvo.net/video/typing-on-computer-white-bg/4475/ -->
       <!-- DO NOT USE THIS VIDEO, I JUST NEEDED A HOSTED VIDEO FOR THIS CODEPEN> USE THE ONE ABOVE -->
-      <video src="_assets/_img/home-video.mp4" autoplay="true" loop="true">
+      <video src="_ativos/_img/home-video.mp4" autoplay="true" loop="true">
         </video>
     </div>
     <div class="section-overlay"></div>

@@ -1,8 +1,8 @@
 <?php
    require '_config/config.php';
    require '_includes/header.php';
-   require '_get_set/get_apadrinhamento.php';
-   require '_get_set/set_apadrinhamento.php';
+   require '_pegar_inserir/pegar_apadrinhamentos.php';
+   require '_pegar_inserir/inserir_apadrinhamentos.php';
 
    //Consultar os estados para preencher SELECT
    // $sql = $pdo->query("SELECT id_estado,nome FROM estados ORDER BY id DESC;");

@@ -1,5 +1,5 @@
 <?php
- // Script abaixo pega as informações do formulário para o arquivo set_apadrinhamento.php
+ // Script abaixo pega as informações do formulário para o arquivo inserir_apadrinhamentos.php
 	if(isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['termos']))	{
 		$nome = addslashes(ucwords($_POST['nome']));
 		$email = addslashes($_POST['email']);

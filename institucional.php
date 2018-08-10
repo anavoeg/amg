@@ -30,10 +30,10 @@
           <h4>Nossos voluntários</h4>
             <div class="section-people-gallery">
               <div class="volunter">
-              <img src="_assets/_img/people.jpeg" alt="">
-              <img src="_assets/_img/people1.jpeg" alt="">
-              <img src="_assets/_img/people2.jpeg" alt="">
-              <img src="_assets/_img/people3.jpeg" alt="">
+              <img src="_ativos/_img/people.jpeg" alt="">
+              <img src="_ativos/_img/people1.jpeg" alt="">
+              <img src="_ativos/_img/people2.jpeg" alt="">
+              <img src="_ativos/_img/people3.jpeg" alt="">
               </div>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni accusantium, eum dolore illo quia accusamus, deserunt eos optio recusandae, totam sapiente assumenda quibusdam ipsam? Ullam delectus facere tempora atque porro.</p>
             </div>

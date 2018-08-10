@@ -69,7 +69,7 @@
             <div class="missing-kids-content">
                <div class="card card1">
                   <div class="card-missing-header">
-                     <img src="_assets/_img/kid.jpg">
+                     <img src="_ativos/_img/kid.jpg">
                      <span class="card-title">desaparecido: João Santana</span>
                   </div>
                   <div class="card-missing-info">
@@ -80,7 +80,7 @@
                </div>
                <div class="card card2">
                   <div class="card-missing-header">
-                     <img src="_assets/_img/kid1.jpeg">
+                     <img src="_ativos/_img/kid1.jpeg">
                      <span class="card-title">desaparecido: João Santana</span>
                   </div>
                   <div class="card-missing-info">
@@ -91,7 +91,7 @@
                </div>
                <div class="card card3">
                   <div class="card-missing-header">
-                     <img src="_assets/_img/kid2.jpeg">
+                     <img src="_ativos/_img/kid2.jpeg">
                      <span class="card-title">desaparecido: João Santana</span>
                   </div>
                   <div class="card-missing-info">
@@ -102,7 +102,7 @@
                </div>
                <div class="card card4">
                   <div class="card-missing-header">
-                     <img src="_assets/_img/kid3.jpeg">
+                     <img src="_ativos/_img/kid3.jpeg">
                      <span class="card-title">desaparecido: João Santana</span>
                   </div>
                   <div class="card-missing-info">
@@ -125,6 +125,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
-<script type="text/javascript" src="_assets/_js/scripts.js"></script>
+<script type="text/javascript" src="_ativos/_js/scripts.js"></script>
 </body>
 </html>

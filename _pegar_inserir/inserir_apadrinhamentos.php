@@ -2,7 +2,7 @@
 
 //http://www.linhadecodigo.com.br/artigo/244/upload-de-arquivos-em-php.aspx
 
-//script abaixo insere no banco as informações pegas no arquivo get_apadrinhamento.php
+//script abaixo insere no banco as informações pegas no arquivo pegar_apadrinhamentos.php
 
 if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['termos'])) {
 	$falha = false;
@@ -48,6 +48,6 @@ if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['termos'])) 
 		unset($sucesso);
 		global $falha;
 		$falha = true;
-	}    
+	}
 }
 ?>
