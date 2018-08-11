@@ -502,16 +502,17 @@ border-right: none;
 border-bottom: none;
 color: darkslategrey;
 }
-input[type=text], input[type=password], input[type=email]{
+input[type=text], input[type=password], input[type=email], input[type=password]{
   border:none;
   border-bottom: 1.5px solid cadetblue;
   width: 100%;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 input[type=text]:focus, input[type=email]:focus{
     animation: full-border .80s ease-in-out forwards;
 }
-input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder
+, input[type="password"]::-webkit-input-placeholder {
   color: black;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -881,7 +882,7 @@ h5.midia-text{
   margin: 1em;
 }
 .content{
-  padding: 1em;
+  padding: 0.4em;
 }
 /*land page*/
 #land-nav {

@@ -1,5 +1,5 @@
 <?php
-require '_inclui/header.php';
+// require '_includes/header.php';
 require '_config/config.php';
 
 if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
@@ -29,41 +29,56 @@ if(isset($_POST['usuario']) && !empty($_POST['usuario'])){ // verificando
 
 }
 ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!--Compatibilidade com Edge-->
-        <meta charset="UTF-8">
-        <title>Login Tabarato</title>
-        <meta name="description" content="Ganhe tempo e agilidade com o Sistema de Lançamento de Promoções online do Tá Barato"/>
-        <meta name="keywords" content="Promoções, Mercado, Super Mercado, Promoção, Barato, Tempo"/>
-        <meta name="robots" content="index, follow"> <!-- orienta os buscadores a n�o indexar o conte�do da p�gina e impede-a de seguir os links para descobrir novas p�ginas-->
-        <meta name="author" content="Senac 2019">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-        <link rel="shortcut icon" href="_ativos/_img/ico.png" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="amg-admin.css" type="text/css">
-
-    </head>
-    <body>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="_ativos/_css/style.css"> -->
+    <link rel="stylesheet" href="_ativos/_css/amg-admin.css">
+    <title>Login AMG</title>
+</head>
+<body>
+<header class="amg-top">
+    <nav class="header-nav">
+        <a href="index.php" class="amg-brand"><h1>amg</h1></a>
+        <ul class="navigation" >
+            <li><a href="criancas_desaparecidas.php">crianças desaparecidas</a></li>
+            <li>eventos</li>
+                    <!-- <i class="fas fa-sign-out-alt"></i> -->
+          </span>
+            </li>
+        </ul>
+    </nav>
+</header>
     <div class="container">
         <section class="login-form">
             <form method="POST" role="login">
-                <input type="text" name="usuario" placeholder="Usuário" required class="form-control input-lg"  />
+                <input type="text" name="usuario" placeholder="Usuário" required class="form-input"  />
 
-                <input type="password" name="senha" class="form-control input-lg" id="password" placeholder="Senha" required="" />
+                <input type="password" name="senha" class="form-input" id="password" placeholder="Senha" required="" />
 
-                <button type="submit" name="go" class="btn">Entrar</button>
-                <a href="login.php">Área Restrita</a>
+                <button type="submit" name="go" class="btn btn-login">Entrar</button>
             </form>
-            <div class="">
-                <a href="login.php">www.amigoestouaqui.com</a>
+            <div class="text-last">
+                <span>Área Restrita</span>
+                <a href="index.php">www.amigoestouaqui.ml</a>
             </div>
         </section>
     </div>
+    <footer class="page-footer">
+   <div class="footer-layer">
+      <div class="footer-content">
+            <blockquote><p>Se a fase é ruim e são tantos problemas que não tem fim, 
+                  não se esqueça que ouviu de mim, <i style="color:rgb(212, 0, 231);">amigo estou aqui</i></p></blockquote>
+      <div class="footer-copyright">
+         <div class="footer-bottom">
+            © 2014 Amigo Estou Aqui
+         </div>
+      </div>
+</footer>
+
     </body>
     </html>
-<?php
-require '_inclui/footer.php';
-?>
