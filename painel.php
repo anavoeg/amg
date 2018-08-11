@@ -64,7 +64,7 @@ if (!isset($_GET['crianca']) && empty($_GET['crianca'])){
             </ul>
         </div>
     </div>
-    <form method="POST" enctype="multipart/form-data" class="admin-form missing-kids">
+    <form method="POST" enctype="multipart/form-data" id="formulario_desaparecidos" class="admin-form missing-kids">
         <h4>Formulário de crianças desaparecidas</h4>
         <hr>
         <?php if (isset($_GET['crianca']) && !empty($_GET['crianca']))://Apenas aparece o status quando for edição.?>
@@ -81,24 +81,19 @@ if (!isset($_GET['crianca']) && empty($_GET['crianca'])){
             <br><label for="files" class="upload">Foto da criança desaparecida</label>
         </div>
         <div class="input-field">
-            <input name="nome" type="text" id="nome">
-            <br><label for="nome">Nome da criança desaparecida</label>
+			<input name="nome" type="text" id="nome" placeholder="Nome da criança desaparecida">
         </div>
         <div class="input-field">
-            <input name="data_desaparecimento" type="text" id="data_desaparecimento" >
-            <br><label for="data_desaparecimento">Data do desaparecimento</label>
+			<input name="data_desaparecimento" type="text" id="data_desaparecimento" placeholder="Data do desaparecimento">
         </div>
         <div class="input-field">
-            <input name="visto_por_ultimo" type="text" id="visto_por_ultimo" >
-            <br><label for="visto_por_ultimo">Visto por ultimo</label>
+			<input name="visto_por_ultimo" type="text" id="visto_por_ultimo" placeholder="Visto por ultimo">
         </div>
         <div class="input-field">
-            <input name="idade" type="text" min="1" max="18" id="idade" >
-            <br><label for="idade">Data de Nascimento</label>
+			<input name="idade" type="text" min="1" max="18" id="idade" placeholder="Data de Nascimento">
         </div>
         <div class="input-field">
-            <input name="recompensa" type="text" id="recompensa">
-            <br><label for="recompensa">Recompensa</label>
+			<input name="recompensa" type="text" id="recompensa" placeholder="Recompensa">
         </div>
 
         <button type="submit" class="btn admin-btn">Enviar dados</button>
@@ -111,6 +106,60 @@ if (!isset($_GET['crianca']) && empty($_GET['crianca'])){
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 <script type="text/javascript">
     $(document).ready( function(){
+
+		$('#formulario_desaparecidos').validate({ // iniciando o plugin validate do jquery para validar os campos do formulário
+        rules: {
+            nome: {
+                required: true,
+                minlength: 3
+            },
+            arquivo: {
+                required: true
+            },
+            data_desaparecimento: {
+                required: true
+            },
+            visto_por_ultimo: {
+                required: true
+            },
+            idade: {
+                required: true
+            },
+
+        },
+		
+        messages: {
+            nome: {
+                required: "Por favor, informe o nome.",
+                minlength: "O nome deve ter pelo menos 3 caracteres."
+            },
+            arquivo: {
+                required: "É necessário a fota da criança, Tamanho Máx: 40MB.",
+            },
+            data_desaparecimento: {
+                required: "A data de desaparecimento não pode ficar em branco.",
+            },
+            rel_status: {
+                required: "O estado Civíl não pode ficar em branco."
+            },
+            visto_por_ultimo: {
+                required: "O local onde a criança foi vista pela última vez não pode ficar em branco."
+            },
+            idade: {
+                required: "Você deve inserir a data de nascimento da criança."
+            },
+        }
+
+    });
+
+    //Máscaras
+    $('#idade, #data_desaparecimento').mask('00/00/0000');
+    $('#recompensa').mask('000.000.000.000.000,00', {
+        reverse: true
+    });
+	
+		
+		//Botão de status da criança;
         $('.switch').each(function() {
             var checkbox = $(this).children('input[type=checkbox]');
             var toggle = $(this).children('label.switch-toggle');
@@ -147,6 +196,7 @@ if (!isset($_GET['crianca']) && empty($_GET['crianca'])){
             };
         });
     });
+
 </script>
 
 </body>
