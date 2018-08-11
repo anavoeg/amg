@@ -64,7 +64,10 @@ option[selected]{
   text-decoration: none;
   cursor: pointer;
 }
-
+.wrapper span{
+  margin: 0.5em 0;
+  float: right;
+}
 /*     landing page*/
 .v-section{
   height:100vh;
@@ -435,9 +438,12 @@ padding: 3em;
 }
 .missing-kids-content{
   padding: 0.5em;
-  display: grid;
-  grid-template-columns: 40% 40%;
+  display: flex;
+  /* grid-template-columns: 40% 40%; */
   justify-content: space-around;
+  /* flex-basis: 50%; */
+  flex-flow: row wrap;
+  flex-direction: row;
 }
 /* card1{
   grid-column: 1;
@@ -452,10 +458,10 @@ card4{
   grid-column: 4;
 } */
 .card{
-  width: 90%;
+  width: 40%;
   margin: 0 2em 1em 0;
   align-content: space-evenly;
-  box-shadow: 0 0 20px 0 rgb(0, 0, 43);
+  box-shadow: 0 10px 10px 0 rgb(0, 0, 43);
   display: flex;
 }
 .card-missing-header img{
@@ -467,7 +473,11 @@ card4{
   font-weight: 700;
   align-items: flex-end;
 }
-.card-title {
+.card-title{
+  text-transform: uppercase;
+}
+.card-title span{
+  font-size: 0.9em;
 }
 .card-missing-info{
   text-align: center;
@@ -495,7 +505,8 @@ color: darkslategrey;
 input[type=text], input[type=password], input[type=email]{
   border:none;
   border-bottom: 1.5px solid cadetblue;
-  width: 100%
+  width: 100%;
+  font-size: 1em;
 }
 input[type=text]:focus, input[type=email]:focus{
     animation: full-border .80s ease-in-out forwards;
@@ -888,6 +899,7 @@ h5.midia-text{
   justify-content: space-between;
 }
 .card{
+  width: 100%;
   flex-direction: column;
 }
 .card-missing-info{

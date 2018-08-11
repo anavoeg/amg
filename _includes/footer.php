@@ -70,7 +70,9 @@
                <div class="card card1">
                   <div class="card-missing-header">
                      <img src="_ativos/_img/kid.jpg">
-                     <span class="card-title">desaparecido: João Santana</span>
+                     <span class="card-title">desaparecido: João Santana <br>
+                                                <span>idade: 8 anos</span>
+                  </span>
                   </div>
                   <div class="card-missing-info">
                      <section>data do desaparecimento: 08/09/2015</section>
