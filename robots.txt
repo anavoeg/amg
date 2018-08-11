@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /_arquivos/
+Disallow: /_banco_de_dados/
+Disallow: /_classes/
+Disallow: /_config/
+Disallow: /_funcoes/
+Disallow: /_pegar_inserir/

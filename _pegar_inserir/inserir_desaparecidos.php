@@ -19,13 +19,13 @@ if(isset($nome) && !empty($nome)){
             $sql -> bindValue(":status", 0);//sempre que cadastrar uma criança ela será desaparecida.
             $sql -> execute();
 
-            global $sucesso;
-            $sucesso = true;
+            global $sucessoDesaparecido;
+            $sucessoDesaparecido = "Criança desaparecida foi inserida com sucesso em nosso banco de dados.";
 
         }catch (Exception $e) {
             unlink($nomeArq);
-            global $falha;
-            $falha = true;
+            global $falhaDesaparecido;
+            $falhaDesaparecido = "Falha ao inserir criança desaparecida em nosso banco de dados, verifique se digitou os dados corretamente,";
         }
     }
 

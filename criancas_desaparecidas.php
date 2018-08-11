@@ -25,11 +25,12 @@ if($sql -> rowCount() > 0){
 
 } else {
     echo "<script type='text/javascript'>alert('Não existem desaparecidos.')</script>";
+    $vazio = true;
 }
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,8 +49,8 @@ if($sql -> rowCount() > 0){
     <nav class="header-nav">
         <a href="index.php" class="amg-brand"><h1>amg</h1></a>
         <ul class="navigation" >
-            <li><a href="criancas_desaparecidas.php">crianças desaparecidas</a></li>
-            <li>eventos</li>
+            <li><a href="criancas_desaparecidas.php">Crianças desaparecidas</a></li>
+            <li><a href="painel.php">Cadastro</a></li>
             <li><span class="logout"><a href="sair.php">
               <img src="_ativos/_img/logout.png" alt=""></a>
                     <!-- <i class="fas fa-sign-out-alt"></i> -->
@@ -72,11 +73,13 @@ if($sql -> rowCount() > 0){
             </ul>
         </div>
     </div>
+    <?php echo @$vazio?exit():'';?>
 
     <?php foreach ($desaparecidos as $desaparecido):?>
-
-        <div style="border: 1px solid #ccc; width: 20%; margin: 1%; padding: 1%;">
-            <h3><?php echo $desaparecido['nome']?></h3> <span><a href="painel.php?crianca=<?php echo $desaparecido['id'];?>" >Editar</a></span>
+    <div style="width: 20%; margin-bottom: 2%;">
+        <a style="margin-left: 5%; text-decoration: underline;" href="painel.php?crianca=<?php echo $desaparecido['id'];?>" >Editar</a>
+        <div style="border: 1px solid #ccc; width: 95%; margin: 1%; padding: 1%;">
+            <h3><?php echo $desaparecido['nome']?></h3>
             <?php echo $desaparecido['status']? "<p style='color: cadetblue;'>Encontrado</p>" : "<p style='color: #ff4906;'>Desaparecido</p>";?>
             <small>
                 <?php
@@ -84,7 +87,10 @@ if($sql -> rowCount() > 0){
                 echo idade($data_nascimento).' Anos de idade.';
                 ?>
             </small>
+            <span style="float: right; font-weight: bold;"><a href="excluir.php?crianca=<?php echo $desaparecido['id'];?>" >Excluir</a></span>
         </div>
+    </div>
+
     <?php endforeach;?>
 </div>
 

@@ -1,5 +1,5 @@
 <?php
-require '_includes/header.php';
+require '_inclui/header.php';
 require '_config/config.php';
 
 if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
@@ -65,5 +65,5 @@ if(isset($_POST['usuario']) && !empty($_POST['usuario'])){ // verificando
     </body>
     </html>
 <?php
-require '_includes/footer.php';
+require '_inclui/footer.php';
 ?>

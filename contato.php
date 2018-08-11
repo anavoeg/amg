@@ -1,5 +1,5 @@
 <?php
-require '_includes/header.php';
+require '_inclui/header.php';
 ?>
 
 <div class="content">
@@ -30,5 +30,5 @@ require '_includes/header.php';
 </div>
 
 <?php
-require '_includes/footer.php';
+require '_inclui/footer.php';
 ?>

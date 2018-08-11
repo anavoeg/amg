@@ -1,5 +1,5 @@
 <?php
-    require '_includes/header.php';
+    require '_inclui/header.php';
 ?>
     <div class="amg-aboutus">
       <div class="amg-aboutus-first">
@@ -40,18 +40,7 @@
         </div>
       </div>
     </div>
-      <!-- <section class="amg-missing">
-            <div class="card">
-            <div class="card-image">
-              <img src=<?php echo $dados['path']?>.jpeg>
-              <span class="card-title">desaparecido: <?php echo $dados['path']?></span>
-            </div>
-            <div class="card-content">
-              <p><?php echo $dados['path']?></p>
-            </div>
-            </div>
-        </section> -->
   </div>
 <?php
-    require '_includes/footer.php';
+    require '_inclui/footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-    require '_includes/header.php';
+    require '_inclui/header.php';
 ?>
 <section class="amg-doe">
     <h2>Faça uma criança feliz, <br> doe um brinquedo!</h2>
@@ -24,5 +24,5 @@
 </div>
 
 <?php
-    require '_includes/footer.php';
+    require '_inclui/footer.php';
 ?>
